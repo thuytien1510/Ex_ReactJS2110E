@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển trên form</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            background-color: #add8e6;
+        }
+    </style>
+    <script>
+        function login(){
+            var user = document.getElementById('id_user').value;
+            var upw = document.getElementById('pw').value;
+            if (user=="" || user=="default" || upw==""){
+                document.getElementById('dangnhap').innerHTML='<td colspan="2" align="center">default</td>'
+                
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2 style="color: #ffa600;text-align: center;">Đăng nhập</h2>
+    <form>
+        <table align="center">
+            <tr>
+                <td><label for="id_user">Mã người dùng</label></td>
+                <td><input type="text" id="id_user" name="iduser" value="default"></td>
+            </tr>
+            <tr>
+                <td><label for="pw">Mật khẩu</label></td>
+                <td><input type="password" id="pw" name="pwuser"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" id="dn" value="Đăng nhập" onclick="login()"></td>
+            </tr>
+            <tr id='dangnhap'>
+            </tr>
+            
+
+        </table>
+    </form>
+</body>
+</html>

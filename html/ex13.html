@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển</title>
+    <style>
+        h2{
+            color: #0b8200;
+            text-align: center;
+        }
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: #90ee90;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+        label{
+            color: #0b8200;
+        }
+        legend{
+            color:#0b8200 ;
+        }
+        input[type=text] {
+            
+            padding-right: 70px;
+            box-sizing: border-box;
+
+        }
+        
+    </style>
+    <script>
+        function login(){
+            
+                document.getElementById('submit').innerHTML='<td colspan="2" align="center" style="color:red">Bạn đã đăng ký thành công!!!</td>'
+
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Đăng ký du lịch</h2>
+    <form>
+        <table align="center" width="90%">
+            <col width="30%">
+            <col width="60%">
+            <tr>
+                <td ><label for="name">Họ và Tên</label></td>
+                <td><input type="text" id="name" name="hoten" value="Ngô Thúc Đạt" size="40px"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Địa chỉ</label></td>
+                <td><input type="text" id="address" name="diachi" value="2Bia Hùng Vương, Q10" size="30px"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td><input type="text" id="phone" name="sdt" value="0964526985" size="20px"></td>
+            </tr>
+            <tr>
+                <td><label for="customer">Khách Việt Nam</label></td>
+                <td><input type="checkbox" id="customer" name="khachVN" checked></td>
+            </tr>
+            <tr>
+                <td><label for="tours">Chọn tour</label></td>
+                <td>
+                        <select id="tours" name="tours" style="width:auto">
+                            <optgroup label="Miền Bắc">
+                                <option value="NT">Nha Trang - Đà Lạt</option>
+                                <option value="BMT">Buôn Mê Thuột - Gia Lai</option>
+                            </optgroup>
+                        </select>
+                </td>
+            </tr>
+            <tr><td><label for="vehicle">Phương tiện</label></td>
+                <td>
+                        <input type="radio" id="plan" name="phuongtien" value="maybay" checked>
+                        <label for="plan">Máy bay</label>
+                        <input type="radio" id="girl" name="phuongtien" value="oto">
+                        <label for="car">Ô tô</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding: 2px 100px;">
+                    <fieldset>
+                        <legend>Chọn sản phẩm tham gia</legend>
+                        <label for="big">Người lớn</label>
+                        <input type="number" id="big" name="big" value="6" style="width: 30px;">
+                        <label for="small">Trẻ em</label>
+                        <input type="number" id="small" name="small" value="4" style="width: 30px;">
+                      </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="note">Ghi chú thêm</label></td>
+                <td><textarea name="ghichu" id="note" cols="30" rows="2">
+Có 2 trẻ em dưới 6 tuổi
+Có 2 người ăn chay</textarea>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="login()"></td>
+            </tr>
+            <tr id='submit'>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

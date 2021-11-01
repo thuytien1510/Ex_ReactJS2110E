@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển</title>
+    <style>
+        h2{
+            color: #0b8200;
+            text-align: center;
+        }
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: #90ee90;
+            padding: 2px;
+        }
+        label{
+            color: #0b8200;
+        }
+    </style>
+    <script>
+        function login(){
+            // var nameU = document.getElementById('name').value;
+            // var sdt = document.getElementById('phone').value;
+            // var sp = document.getElementById('products').value;
+            // var dudoan = document.getElementById('people').value;
+            // if (nameU =="" || sdt =="" ||  sp =="" || dudoan == "" ){
+            //     document.getElementById('submit').innerHTML='<td colspan="2" align="center" style="color:red">Looix!</td>'
+
+            // }else{
+                document.getElementById('submit').innerHTML='<td colspan="2" align="center" style="color:red">Bạn đã đăng ký thành công!!!</td>'
+
+            // }
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+    <form>
+        <table align="center" width="90%">
+            <col width="50%">
+            <col width="40%">
+            <tr>
+                <td><label for="name">Họ và Tên</label></td>
+                <td><input type="text" id="name" name="hoten" value="Ngô Thúc Đạt" size="35px"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Địa chỉ</label></td>
+                <td><input type="text" id="address" name="diachi" value="2Bia Hùng Vương, Q10" size="30px" s></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td><input type="text" id="phone" name="sdt" value="0964526985" size="15px"></td>
+            </tr>
+            <tr><td><label for="gender">Phái</label></td>
+                <td>
+                        <input type="radio" id="boy" name="gioitinh" value="Nam" checked>
+                        <label for="boy">Nam</label>
+                        <input type="radio" id="girl" name="gioitinh" value="Nu">
+                        <label for="girl">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="jobs">Nghề nghiệp</label></td>
+                <td>
+                        <select id="jobs" name="jobs" style="width:auto">
+                            <option value="Giáo viên">Giáo viên</option>
+                            <option value="Bác sĩ">Bác sĩ</option>
+                            <option value="Kỹ sư">Kỹ sư</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="products">Chọn sản phẩm tham gia</label></td>
+                <td>
+                        <select name="products" id="products" size="4" style="width:auto" multiple>
+                            <option value="Kem đánh răng">Kem đánh răng</option>
+                            <option value="Bột giặt">Bột giặt</option>
+                            <option value="Dầu gội đầu">Dầu gội đầu</option>
+                            <option value="Sữa tắm">Sữa tắm</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="people">Số người dự đoán tham gia</label></td>
+                <td><input type="number" id="people" name="songuoi" value="250000"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="login()"></td>
+            </tr>
+            <tr id='submit'>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

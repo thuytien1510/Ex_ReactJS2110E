@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng văn bản</title>
+    <style>
+        header{
+            color:#ffaa00 ;
+            text-align: center;
+        }
+        .left{
+            float: left;
+
+        }
+        .right{
+            float: left;
+            margin-left: 70px;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+            height: 160px;
+        }
+        
+        th,td{
+            border: 1px solid purple;
+        }
+        th{
+            background-color:#CC6600 ;
+            color: #FFFFFF;
+        }
+        .c2{
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        tr:nth-child(odd){background-color: #FFEDCA;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Các món ngon Hà Nội</h1>
+    </header>
+    <div>
+        <div class="left">
+            <img src="https://hoanghaigroup.com/wp-content/uploads/2020/07/Mon-ngon-ha-noi.jpg" width="230" height="160" alt="hình ảnh minh hoạ">
+        </div>
+        <div class="right">
+            <table>
+                <col width="40%">
+                <col width="60%">
+              <tr>
+                  <th>STT</th>
+                  <th>Tên món ăn</th>
+              </tr>  
+              <tr>
+                  <td>1.</td>
+                  <td class="c2">Bánh cuốn Thanh Tri</td>
+              </tr>
+              <tr>
+                  <td>2.</td>
+                  <td class="c2">Xôi Hà Nội</td>
+              </tr>
+              <tr>
+                  <td>3.</td>
+                  <td class="c2">Bánh cuốn Thanh Tri</td>
+              </tr>
+              <tr>
+                  <td>4.</td>
+                  <td class="c2">Xôi Hà Nội</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
