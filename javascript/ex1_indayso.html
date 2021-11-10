@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascrip</title>
+</head>
+<script>
+    function printarray(){
+        var n= document.getElementById('number').value; 
+        var a ="" 
+        for(var i = 1 ; i<= n; i++){
+            a += i + " ";
+        }
+        document.getElementById('answer').innerHTML = a;
+    }
+</script>
+<body>
+    <form>
+        <input type="text" id="number">
+        <input type="button" onclick="printarray()" value="Answers">
+    </form>
+    <p id="answer"></p>
+</body>
+</html>
