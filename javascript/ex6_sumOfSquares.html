@@ -7,20 +7,20 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function printarray(){
+    function sumOfSquares(){
         var n= document.getElementById('number').value; 
-        var a ="" 
-        for(var i = 2 ; i<= n; i+=2){
-            a += i + " ";
+        var s = 0 
+        for(var i = 0; i <= n; i++){
+            s += i*i;
         }
-        document.getElementById('answer').innerHTML = a;
+        document.getElementById('answer').innerHTML = s;
     }
 </script>
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="printarray()" value="Answers">
+        <input type="button" onclick="sumOfSquares()" value="SUM">
     </form>
-    <p id="answer"></p>
+    <p>Answers: </p><span id="answer"></span>
 </body>
 </html>

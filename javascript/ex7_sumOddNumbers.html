@@ -7,27 +7,20 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function testNumber(){
+    function sumOddNumbers(){
         var n= document.getElementById('number').value; 
-        var cc = 0;
-        var r; 
-        for(var i = n;i!=0 ;  i=Math.floor(i/10)){
-            r = i%10;
-            cc = cc*10 + r;
+        var s = 0 
+        for(var i = 1; i <= n; i+=2){
+            s += i;
         }
-        if(cc==n){
-            document.getElementById('answer').innerHTML = 'YES';
-        }else{
-            document.getElementById('answer').innerHTML = 'NO';
-        }    
+        document.getElementById('answer').innerHTML = s;
     }
 </script>
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="testNumber()" value="TEST">
+        <input type="button" onclick="sumOddNumbers()" value="SUM">
     </form>
     <p>Answers: </p><span id="answer"></span>
 </body>
 </html>
- 

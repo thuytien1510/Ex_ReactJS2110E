@@ -7,10 +7,10 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function printarray(){
+    function evenNumbers(){
         var n= document.getElementById('number').value; 
         var a ="" 
-        for(var i = 1 ; i<= n; i++){
+        for(var i = 2 ; i<= n; i+=2){
             a += i + " ";
         }
         document.getElementById('answer').innerHTML = a;
@@ -19,7 +19,7 @@
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="printarray()" value="Answers">
+        <input type="button" onclick="evenNumbers()" value="Answers">
     </form>
     <p id="answer"></p>
 </body>

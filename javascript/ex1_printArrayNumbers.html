@@ -7,20 +7,20 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function sum(){
+    function printArrayNumbers(){
         var n= document.getElementById('number').value; 
-        var s = 0 
-        for(var i = 1; i <= n; i+=2){
-            s += i;
+        var a ="" 
+        for(var i = 1 ; i<= n; i++){
+            a += i + " ";
         }
-        document.getElementById('answer').innerHTML = s;
+        document.getElementById('answer').innerHTML = a;
     }
 </script>
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="sum()" value="SUM">
+        <input type="button" onclick="printArrayNumbers()" value="Answers">
     </form>
-    <p>Answers: </p><span id="answer"></span>
+    <p id="answer"></p>
 </body>
 </html>

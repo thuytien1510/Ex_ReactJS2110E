@@ -7,20 +7,27 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function sum(){
+    function checkNumberSymmetry(){
         var n= document.getElementById('number').value; 
-        var s = 0 
-        for(var i = 0; i <= n; i++){
-            s += i*i;
+        var cc = 0;
+        var r; 
+        for(var i = n;i!=0 ;  i=Math.floor(i/10)){
+            r = i%10;
+            cc = cc*10 + r;
         }
-        document.getElementById('answer').innerHTML = s;
+        if(cc==n){
+            document.getElementById('answer').innerHTML = 'YES';
+        }else{
+            document.getElementById('answer').innerHTML = 'NO';
+        }    
     }
 </script>
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="sum()" value="SUM">
+        <input type="button" onclick="checkNumberSymmetry()" value="TEST">
     </form>
     <p>Answers: </p><span id="answer"></span>
 </body>
 </html>
+ 

@@ -7,40 +7,31 @@
     <title>Javascrip</title>
 </head>
 <script>
-    function ktprimenumber(a){ 
+    function primeNumber(){
+        var n= document.getElementById('number').value;  
         var answer = true;
-        if (a < 2 ){
+        if (n < 2 ){
             answer = false;
         }else{
-            for (var i = 2; i < a-1; i++){
-                if(a%i == 0){
+            for (var i = 2; i < Math.sqrt(n); i++){
+                if(n%i == 0){
                     answer = false;
                     break;
                 }
             }
         }
         if(answer==true){
-            return true;
+            document.getElementById('answer').innerHTML = 'YES';
         }else{
-            return false;
+            document.getElementById('answer').innerHTML = 'NO';
         }
-    }
-    function primenumber(){
-        var n= document.getElementById('number').value; 
-        var p = "";
-        for (var i = 1; i <= n ; i++){
-            if(ktprimenumber(i)==true){
-                p += i + " ";
-            }
-        }
-        document.getElementById('answer').innerHTML = p;
     }
 </script>
 <body>
     <form>
         <input type="text" id="number">
-        <input type="button" onclick="primenumber()" value="Answers">
+        <input type="button" onclick="primeNumber()" value="Is a prime number?">
     </form>
-    <p id="answer"></p>
+    <p>Answers: </p><span id="answer"></span>
 </body>
 </html>
