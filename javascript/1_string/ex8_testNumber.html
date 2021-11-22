@@ -10,8 +10,8 @@
     function testNumber(){
         var n= document.getElementById('number').value; 
         var answer = true
-        for(var i = 0; i <= n; i++){
-            if((n%10)%2 == 0){
+        for(var i = n;i!=0 ;  i=Math.floor(i/10)){
+            if(i%2 == 0){
                 answer = false;
                 break;
             }
