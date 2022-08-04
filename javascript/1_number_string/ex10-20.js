@@ -76,7 +76,7 @@ function findId(str) {
 findId('https://www.facebook.com/ngothucdat');
 
 //17.  Viết hàm số tính min, max của 3 số?
-function findmin(a,b,c){
+function findMinMax(a,b,c){
     let min = a; 
     if (min > b){
         min=b;
@@ -86,7 +86,17 @@ function findmin(a,b,c){
     }
     console.log(min);
 }
-findmin(8,10,7)
+findMinMax(8,10,7)
+function findmax(a,b,c){
+    let max = a;
+    if(max<b){
+        max=b;
+    }else if(max<c){
+        max=c;
+    }
+    console.log(max);
+}
+findmax(8,10,7)
 
 //18. Viết hàm tìm vị trí xâu X tồn tại kề cuối trong xâu Y?
 function findposition2(s1,s2){
@@ -107,10 +117,20 @@ function total(n){
 }
 console.log(total(9))
 // function ignoreSt(str){
-//     let n ="";
-//     for(let i = 0; i < n.length; i++){
-//         n = str.replace(/\s+/g, '');
-     
-//  }
-// }
-// ignoreSt('computer =            " ngan 98    " AND class = "  REACTJS2002 AND \= " OR name = “hieu”');
+    // var i = 0
+    // for (var i = 0; i <str.length; i++) {
+        // if( i == str.indexOf('"')){
+        //  str.slice(0,i).replace(/  +/g,' ') 
+            // var p = str.indexOf('"',i)
+            // if (str.slice(i,p).includes('AND')==true){
+            //     return str.slice(0,i).replace(/  +/g,' ').concat(str.slice(i,p).trim().replace('AND',''))
+            // } 
+
+            // }
+        // }
+//         str.replace(/  +/g,' ');
+//         return str
+        
+//     }
+
+// console.log(ignoreSt('computer =            " ngan 98    " AND class = "  REACTJS2002 AND " OR name = “hieu”'))

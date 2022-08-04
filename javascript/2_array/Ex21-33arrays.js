@@ -151,9 +151,10 @@ function findSecondLargestNumber(arr){
     }
 }
 findSecondLargestNumber(d)
-// function existSumOfThreeNumbersInArr(arr,k){
+//31.tìm xem trong mảng có tồn tại 3 số có tổng bằng k? (1s) , length of array.
+function existSumOfThreeNumbersInArr(arr,k){
     
     
-// }
-// arr31 =  [1,2,3,4,5,6,7,8,9,9,9,8,7,6,5,4,3,2,1];
-// console.log(existSumOfThreeNumbersInArr(arr31,26))
+}
+arr31 =  [1,2,3,4,5,6,7,8,9,9,9,8,7,6,5,4,3,2,1];
+console.log(existSumOfThreeNumbersInArr(arr31,26))
